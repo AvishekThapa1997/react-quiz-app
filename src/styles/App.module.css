@@ -1,0 +1,36 @@
+.container {
+  /* padding: 0 4rem; */
+  position: relative;
+  height: 100vh;
+  padding: 3.2rem 0;
+}
+
+.primary-heading {
+  font-size: 2.4rem;
+  text-align: center;
+  font-family: "Fascinate Inline", cursive;
+}
+.center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.loading {
+  font-size: 2.4rem;
+  text-align: center;
+}
+.btn-start {
+  font-size: 2rem;
+  padding: 0.5em 1.6em;
+}
+.btn-new {
+  font-size: 2rem;
+  padding: 0.5em 1.6em;
+  margin: 0 auto;
+}
+.score {
+  font-size: 3.2rem;
+  text-align: center;
+  margin-top: 10rem;
+}

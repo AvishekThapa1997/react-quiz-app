@@ -1,0 +1,136 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(8, 8, 8, 0.5);
+}
+.show-backdrop {
+  animation: show-backdrop 0.5s forwards;
+}
+.hide-backdrop {
+  animation: hide-backdrop 1s forwards;
+}
+.overlay-card {
+  margin: 0 2rem;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  padding: 4rem;
+  text-align: center;
+  background: white;
+  transform: translateY(-50%);
+}
+.overlay-title {
+  font-size: 2.4rem;
+  margin-bottom: 3.2rem;
+}
+.modal-btn {
+  font-size: 2.4rem;
+  min-width: 4em;
+  margin-bottom: 1.6rem;
+  padding: 0.2em 1em;
+}
+.modal-btn-control > div:last-child > * {
+  margin-bottom: 0;
+}
+.show-modal {
+  /* top: 50%;
+  z-index: 2; */
+  animation: show-modal 0.5s ease-in forwards;
+}
+.hide-modal {
+  animation: hide-modal 0.5s ease-in forwards;
+  /* top: -100%;
+  z-index: 0; */
+}
+@keyframes show-modal {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+    z-index: 2;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(20%);
+    z-index: 2;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+  }
+}
+@keyframes hide-modal {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+    z-index: 1;
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(50%);
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+    z-index: 1;
+  }
+
+  /* 0% {
+    opacity: 1;
+    top: 0%;
+    z-index: 0;
+  }
+  50% {
+    top: 60%;
+    opacity: 0.8;
+    z-index: 0;
+  }
+  100% {
+    top: -100%;
+    z-index: 0;
+    opacity: 0;
+  } */
+}
+@keyframes show-backdrop {
+  from {
+    opacity: 0;
+    z-index: 0;
+  }
+  to {
+    opacity: 1;
+    z-index: 1;
+  }
+}
+@keyframes hide-backdrop {
+  from {
+    opacity: 1;
+    z-index: 1;
+  }
+  to {
+    opacity: 0;
+    z-index: 0;
+  }
+}
+@media (min-width: 60rem) {
+  .modal-btn-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.4rem;
+  }
+  .modal-btn {
+    margin-bottom: 0;
+  }
+  .overlay-card {
+    max-width: 70rem;
+    margin: auto;
+    /* transform: translate(-50%,; */
+  }
+}
